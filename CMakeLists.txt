@@ -25,7 +25,12 @@ add_subdirectory(vendor)
 
 find_package(OpenGL REQUIRED)
 
-add_executable(${PROJECT_NAME} src/main.cpp) # Declares build target
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/renderer/gl/GLWindow.cpp
+) # Declares build target
+
+target_include_directories(${PROJECT_NAME} PRIVATE src)
 
 # Only let linker link these libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad OpenGL::GL)
