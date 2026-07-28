@@ -10,6 +10,8 @@ GLWindow::GLWindow(int width, int height, std::string title) {
     }
 
     window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
+    this->width = width;
+    this->height = height;
 
     // Verify window was properly created.
     if (!window) { 

@@ -10,7 +10,7 @@
  */
 class GLWindow : public Window {
     public:
-        GLWindow(int width, int height, std::string title);
+        explicit GLWindow(int width, int height, std::string title);
         ~GLWindow() override;
 
         void Run(double rate) override;
